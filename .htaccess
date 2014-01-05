@@ -1,0 +1,14 @@
+AddDefaultCharset UTF-8
+AddType image/x-icon .ico
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+
+# Mod_rewrite
+RewriteEngine on
+	
+	# Bestaande mappen of bestanden
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d
+	RewriteRule ^.* - [L]
+
+	RewriteRule ^([A-Za-z0-9-\/]+)$ index.php [L,NC,QSA]

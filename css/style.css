@@ -1,0 +1,9 @@
+.error {
+    cursor: pointer;
+}
+
+.warning-label {
+    padding: 10px 0 10px 0 !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+}
